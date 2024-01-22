@@ -1,0 +1,6 @@
+projectKey=devops-project-samples
+serverUrl=http://prod.local:9000
+serverVersion=10.3.0.82913
+dashboardUrl=http://prod.local:9000/dashboard?id=devops-project-samples
+ceTaskId=AYzWQ2mGL4jX8hfrv4GZ
+ceTaskUrl=http://prod.local:9000/api/ce/task?id=AYzWQ2mGL4jX8hfrv4GZ
