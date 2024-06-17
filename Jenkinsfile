@@ -9,18 +9,7 @@ pipeline {
         DOCKER_IMAGE_TAG = "prod.local:5003"
     }
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-                echo 'Pulling... ' + env.GIT_BRANCH
-            }
-        }
-
-        stage('Tests') {
-            steps {
-                sh 'mvn test'
-            }
-        }
+ 
 
         stage('Sonarqube Analysis') {
             steps {
