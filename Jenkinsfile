@@ -28,6 +28,7 @@ pipeline {
                     withSonarQubeEnv('sonar-server') {
                         sh "mvn clean sonar:sonar -Dintegration-tests.skip=true -Dmaven.test.failure.ignore=true"
                     }
+                    sleep(60)
                     timeout(time: 1, unit: 'MINUTES') {
                         def qg = waitForQualityGate()
                         if (qg.status != 'OK') {
