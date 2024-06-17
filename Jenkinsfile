@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     withSonarQubeEnv('sonar-server') {
-                        sh "mvn clean sonar:sonar -Dintegration-tests.skip=true -Dsonar.issuesReport.console.enable=true  -Dmaven.test.failure.ignore=true"
+                        sh "mvn clean install sonar:sonar -Dintegration-tests.skip=true -Dsonar.issuesReport.console.enable=true  -Dmaven.test.failure.ignore=true"
                     }
                 
                     timeout(time: 1, unit: 'MINUTES') {
