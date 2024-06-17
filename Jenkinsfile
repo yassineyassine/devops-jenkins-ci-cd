@@ -14,7 +14,7 @@ pipeline {
         stage('Sonarqube Analysis') {
             steps {
                 script {
-                    withSonarQubeEnv('sonar-server') {
+                    withSonarQubeEnv('sqa_d880e7f58e484895473c6ae9871378de1e138356') {
                         sh "mvn clean install sonar:sonar -Dintegration-tests.skip=true -Dsonar.issuesReport.console.enable=true  -Dmaven.test.failure.ignore=true"
                     }
                 
