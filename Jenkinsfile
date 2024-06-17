@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     withSonarQubeEnv('sqa_d880e7f58e484895473c6ae9871378de1e138356') {
-                        sh "mvn clean install sonar:sonar -Dintegration-tests.skip=true -Dsonar.issuesReport.console.enable=true  -Dmaven.test.failure.ignore=true"
+                        sh "mvn clean verify sonar:sonar -Dsonar.projectKey=devops-project-samples -Dsonar.projectName='devops-project-samples' -Dsonar.host.url=http://prod.local:9000 -Dsonar.token=sqa_68289cfbdec5fc7bd7ccbb18b3a2d1c62bc4ae8f"
                     }
                 
                     timeout(time: 1, unit: 'MINUTES') {
